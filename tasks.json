@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "id": 0,
+            "name": "Study Bible",
+            "length": 2,
+            "description": "Find a new story in the bible. Read and interperet the story.",
+            "requirements": [
+                "Bible"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Decorate Christmas Tree",
+            "length": 3.5,
+            "description": "Add ornaments, stars, lights, etc. to the Christmas tree.",
+            "requirements": [
+                "Christmas tree",
+                "decorations"
+            ]
+        }
+    ]
+}

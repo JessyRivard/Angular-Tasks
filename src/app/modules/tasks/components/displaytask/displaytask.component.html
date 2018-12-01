@@ -1,0 +1,11 @@
+<div>
+  <h2>{{task.name}}</h2>
+  <br>
+  <h4><i>{{task.length}}</i></h4>
+  <p>{{task.description}}</p>
+  <ul>
+    <li *ngFor="let requirements of task.requirements">{{requirements}}</li>
+  </ul>
+  <button (click)="onClickEdit()">Edit</button>
+  <button (click)="onClickDelete()">Delete</button>
+</div>
