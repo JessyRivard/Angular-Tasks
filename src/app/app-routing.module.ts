@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DisplaytasksComponent } from './modules/tasks/displaytasks/displaytasks.component';
 import { NewtaskComponent } from './modules/tasks/components/newtask/newtask.component';
+import { DisplaytaskComponent } from './modules/tasks/components/displaytask/displaytask.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
     redirectTo: '/tasks',
     pathMatch: 'full'
   },
+  {
+    path: ':id',
+    component: DisplaytaskComponent
+  }
 ];
 
 @NgModule({

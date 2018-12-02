@@ -1,7 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, ElementRef } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { Task } from '../../../shared/models/task';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-displaytasks',
@@ -10,31 +10,28 @@ import { Task } from '../../../shared/models/task';
 })
 export class DisplaytasksComponent implements OnInit {
   private tasksRoute = 'http://localhost:3000/tasks';
-  public tasks: Task[];
-  @Output() taskView: EventEmitter<number> = new EventEmitter();
+  public tasks: Task[]
 
-  constructor(private http: HttpClient, private elementRef:ElementRef) {}
+  constructor(private http: HttpClient) {
+  }
 
   getTasks() {
     this.http.get<Task[]>(this.tasksRoute).subscribe(tasks => {
       this.tasks = tasks;
-    });
+    })
   }
 
   ngOnInit() {
     this.getTasks();
   }
 
-  ngAfterViewInit() {
-    var d1 = this.elementRef.nativeElement.querySelector('.details');
-    d1.insertAdjacentHTML('beforeend', '<app-displaytask></app-displaytask>')
-  }
-
   onClickView(taskid) {
+    window.location.href = taskid
   }
 
   onClickCreate() {
     window.location.href = "new-task";
   }
+
 
 }

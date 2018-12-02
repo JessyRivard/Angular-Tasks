@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { DisplaytasksComponent } from './displaytasks/displaytasks.component';
 import { DisplaytaskComponent } from './components/displaytask/displaytask.component';
 import { NewtaskComponent } from './components/newtask/newtask.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { NewtaskComponent } from './components/newtask/newtask.component';
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [DisplaytasksComponent]
 })
