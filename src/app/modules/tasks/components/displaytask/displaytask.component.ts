@@ -11,22 +11,24 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./displaytask.component.css']
 })
 export class DisplaytaskComponent implements OnInit {
-  private tasksRoute = 'http://localhost:3000/tasks/' + this.route.snapshot.params["id"];
-  public tasks: Task[]
+  private taskRoute = 'http://localhost:3000/tasks/' + this.route.snapshot.params["id"];
+  public task: Task[]
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.getTasks();
+    this.getTask();
   }
 
-  getTasks() {
-    this.http.get<Task[]>(this.tasksRoute).subscribe(tasks => {
-      this.tasks = tasks;
+  getTask() {
+    this.http.get<Task[]>(this.taskRoute).subscribe(task => {
+      this.task = task;
     });
   }
 
-
+  onClickReturn() {
+    window.location.href = "#";
+  }
 
 }

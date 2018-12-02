@@ -33,5 +33,11 @@ export class DisplaytasksComponent implements OnInit {
     window.location.href = "new-task";
   }
 
+  onClickDelete(id) {
+    this.http.delete(this.tasksRoute + "/" + id).subscribe(response => {
+      console.log(response)
+    })
+    window.location.href = "#";
+  }
 
 }

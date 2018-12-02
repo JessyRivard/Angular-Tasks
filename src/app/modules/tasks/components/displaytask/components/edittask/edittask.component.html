@@ -1,0 +1,22 @@
+<form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <div>
+      <label for="name">Task: </label>
+      <input type="text" placeholder="name" name="name" #name="ngModel" value="{{task.name}}" required [(ngModel)]="task.name">
+    </div>
+    <div>
+      <label for="length">Length: </label>
+      <input type="number" placeholder="hours" name="length" #length="ngModel" required [(ngModel)]="task.length">
+    </div>
+    <div>
+      <label for="description">Description: </label>
+      <textarea type="text" placeholder="description" name="description" #description="ngModel" required [(ngModel)]="task.description"></textarea>
+    </div>
+    <div>
+      <label for="requirements">Required Items: <div class="note">One item per line.</div></label>
+      <textarea type="text" placeholder="requirements" name="requirements" #requirements="ngModel" required [(ngModel)]="task.requirements"></textarea>
+    </div>
+    <div>
+      <button type="submit">Save Changes</button>
+    </div>
+</form>
+<button (click)="onClickDelete($event)">Delete</button>

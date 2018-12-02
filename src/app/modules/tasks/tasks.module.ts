@@ -7,12 +7,14 @@ import { DisplaytasksComponent } from './displaytasks/displaytasks.component';
 import { DisplaytaskComponent } from './components/displaytask/displaytask.component';
 import { NewtaskComponent } from './components/newtask/newtask.component';
 import { RouterModule } from '@angular/router';
+import { EdittaskComponent } from './components/displaytask/components/edittask/edittask.component';
 
 @NgModule({
   declarations: [
     DisplaytaskComponent,
     DisplaytasksComponent,
-    NewtaskComponent
+    NewtaskComponent,
+    EdittaskComponent
   ],
   imports: [
     CommonModule,

@@ -15,18 +15,11 @@
       "requirements": "Christmas tree, decorations"
     },
     {
-      "name": "test",
-      "length": 1.2,
-      "description": "testing",
-      "requirements": "STUFF",
-      "id": 2
-    },
-    {
-      "name": "test",
-      "length": 1.2,
-      "description": "testing",
-      "requirements": "STUFF",
-      "id": 3
+      "name": "Eat Lunch",
+      "length": 0.45,
+      "description": "Find and eat food",
+      "requirements": "Food",
+      "id": 4
     }
   ]
 }

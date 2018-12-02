@@ -1,8 +1,8 @@
 <div>
-  <h2>{{tasks.name}}</h2>
-  <h4><i>{{tasks.length}}</i></h4>
-  <p>{{tasks.description}}</p>
-  <p>{{tasks.requirements}}</p>
-  <button (click)="onClickEdit()">Edit</button>
-  <button (click)="onClickDelete()">Delete</button>
+  <button (click)="onClickReturn()">Go Back</button>
+  <h2>{{task.name}}</h2>
+  <h4><i>{{task.length}} Hours</i></h4>
+  <p>{{task.description}}</p>
+  <p>Needed: {{task.requirements}}</p>
+  <app-edittask [task]="task" [taskRoute]="taskRoute"></app-edittask>
 </div>

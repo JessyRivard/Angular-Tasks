@@ -4,7 +4,7 @@
     Tasks: 
   </h2>
   <ol>
-    <li *ngFor="let task of tasks"><button (click)="onClickView(task.id)">{{task.name}}</button></li>
+    <li *ngFor="let task of tasks">{{task.name}}<button (click)="onClickView(task.id)">View</button><button (click)="onClickDelete(task.id)">Delete</button></li>
   </ol>
   <div class="details" #details></div>
 </div>
