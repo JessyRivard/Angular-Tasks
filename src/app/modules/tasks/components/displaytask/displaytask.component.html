@@ -1,8 +1,6 @@
-<div>
-  <button (click)="onClickReturn()">Go Back</button>
+<div class="display-task">
+  <button class="backButton" (click)="onClickReturn()">Go Back</button>
   <h2>{{task.name}}</h2>
-  <h4><i>{{task.length}} Hours</i></h4>
-  <p>{{task.description}}</p>
-  <p>Needed: {{task.requirements}}</p>
+ 
   <app-edittask [task]="task" [taskRoute]="taskRoute"></app-edittask>
 </div>

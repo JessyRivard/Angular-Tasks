@@ -35,6 +35,7 @@ export class EdittaskComponent implements OnInit {
     this.http.put(this.taskRoute, updatedTaskData).subscribe(response => {
       console.log(response)
     })
+    alert("Changes Saved")
   }
 
 }

@@ -15,11 +15,11 @@
       "requirements": "Christmas tree, decorations"
     },
     {
-      "name": "Eat Lunch",
-      "length": 0.45,
-      "description": "Find and eat food",
-      "requirements": "Food",
-      "id": 4
+      "name": "Build Desk",
+      "length": 4,
+      "description": "Assemble new desk for the office.",
+      "requirements": "Desk parts, Screwdriver",
+      "id": 2
     }
   ]
 }

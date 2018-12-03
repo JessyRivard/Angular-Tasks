@@ -1,0 +1,15 @@
+.display-task {
+    padding: 20px;
+    padding-top: 36px;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+.backButton {
+    background-color: #2980B9;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    color: #FBFCFC;
+    margin: 5px;
+    float: right;
+    margin-top: 20px;
+}

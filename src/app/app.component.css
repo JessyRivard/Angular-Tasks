@@ -1,6 +1,8 @@
 #header {
-    background-color: #FFF7AA;
+    background-color: #FBFCFC;
     margin: -25px;
-    padding: 20px 45px 5px 45px;
-    border-bottom: 1px solid black
+    padding-top: 30px;
+    border-bottom: 3px solid #EAEDED;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
 }

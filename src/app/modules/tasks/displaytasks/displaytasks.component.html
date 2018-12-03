@@ -1,10 +1,10 @@
 <div class="display-tasks">
-  <button (click)="onClickCreate()">New Task</button>
+  <button class="newTask" (click)="onClickCreate()">New Task</button>
   <h2>
-    Tasks: 
+    Tasks:
   </h2>
   <ol>
-    <li *ngFor="let task of tasks">{{task.name}}<button (click)="onClickView(task.id)">View</button><button (click)="onClickDelete(task.id)">Delete</button></li>
+    <li class="listItem" *ngFor="let task of tasks"><button class="viewTask" (click)="onClickView(task.id)">View</button><button class="deleteTask" (click)="onClickDelete(task.id)"><b>X</b></button>{{task.name}}</li>
   </ol>
   <div class="details" #details></div>
 </div>

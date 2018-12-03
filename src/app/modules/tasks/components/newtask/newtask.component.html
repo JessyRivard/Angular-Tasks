@@ -1,22 +1,25 @@
-<form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
-  <div>
-    <label for="name">Task: </label>
-    <input type="text" placeholder="task name" name="name" #name="ngModel" required [(ngModel)]="model.name">
+<div class="newTaskComponent">
+  <button class="backButton" (click)="onClickReturn()">Back</button>
+  <h2>
+      New Task 
+    </h2>
+ <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <div>
+      <label for="name">Task: </label>
+      <input type="text" placeholder="name" name="name" #name="ngModel" required [(ngModel)]="model.name">
+    </div>
+    <div>
+      <label for="length">Length <i>(in hours)</i>: </label>
+      <input type="number" placeholder="hours" name="length" #length="ngModel" required [(ngModel)]="model.length">
+    </div>
+    <div>
+      <label for="description">Description: </label>
+      <textarea class="description" type="text" placeholder="description" name="description" #description="ngModel" required [(ngModel)]="model.description"></textarea>
+    </div>
+    <div>
+      <label for="requirements">Required Items:</label>
+      <textarea class="requirements" type="text" placeholder="requirements" name="requirements" #requirements="ngModel" required [(ngModel)]="model.requirements"></textarea>
+    </div>
+      <button class="submitButton" type="submit">Create Task!</button>
+  </form>
   </div>
-  <div>
-    <label for="length">Length: </label>
-    <input type="number" placeholder="hours" name="length" #length="ngModel" required [(ngModel)]="model.length">
-  </div>
-  <div>
-    <label for="description">Description: </label>
-    <textarea type="text" placeholder="description" name="description" #description="ngModel" required [(ngModel)]="model.description"></textarea>
-  </div>
-  <div>
-    <label for="requirements">Required Items: <div class="note">One item per line.</div></label>
-    <textarea type="text" placeholder="requirements" name="requirements" #requirements="ngModel" required [(ngModel)]="model.requirements"></textarea>
-  </div>
-  <div>
-    <button type="submit">Create Task!</button>
-  </div>
-<form>
-<button (click)="onClickReturn()">Go Back</button>
