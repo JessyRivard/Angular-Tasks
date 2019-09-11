@@ -1,9 +1,9 @@
 <div class="newTaskComponent">
   <button class="backButton" (click)="onClickReturn()">Back</button>
   <h2>
-      New Task 
-    </h2>
- <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    New Task
+  </h2>
+  <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
     <div>
       <label for="name">Task: </label>
       <input type="text" placeholder="name" name="name" #name="ngModel" required [(ngModel)]="model.name">
@@ -14,12 +14,14 @@
     </div>
     <div>
       <label for="description">Description: </label>
-      <textarea class="description" type="text" placeholder="description" name="description" #description="ngModel" required [(ngModel)]="model.description"></textarea>
+      <textarea class="description" type="text" placeholder="description" name="description" #description="ngModel"
+        required [(ngModel)]="model.description"></textarea>
     </div>
     <div>
       <label for="requirements">Required Items:</label>
-      <textarea class="requirements" type="text" placeholder="requirements" name="requirements" #requirements="ngModel" required [(ngModel)]="model.requirements"></textarea>
+      <textarea class="requirements" type="text" placeholder="requirements" name="requirements" #requirements="ngModel"
+        required [(ngModel)]="model.requirements"></textarea>
     </div>
-      <button class="submitButton" type="submit">Create Task!</button>
+    <button class="submitButton" type="submit">Create Task!</button>
   </form>
-  </div>
+</div>

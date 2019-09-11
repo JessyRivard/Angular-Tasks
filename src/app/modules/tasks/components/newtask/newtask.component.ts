@@ -21,6 +21,7 @@ export class NewtaskComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     var data = form.value;
+    // cehck if name,lenght... != ''
     var newTaskData = {
       name:data.name,
       length:data.length,
