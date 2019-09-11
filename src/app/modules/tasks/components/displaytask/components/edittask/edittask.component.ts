@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EdittaskComponent implements OnInit {
   @Input() task: Task;
-  @Input() taskRoute: string;
+  @Input() taskroute: string;
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class EdittaskComponent implements OnInit {
   }
 
   onClickDelete(id) {
-    this.http.delete(this.taskRoute).subscribe(response => {
+    this.http.delete(this.taskroute).subscribe(response => {
       console.log(response)
     })
     window.location.href = "#";
@@ -32,7 +32,7 @@ export class EdittaskComponent implements OnInit {
       description:data.description,
       requirements:data.requirements
     }
-    this.http.put(this.taskRoute, updatedTaskData).subscribe(response => {
+    this.http.put(this.taskroute, updatedTaskData).subscribe(response => {
       console.log(response)
     })
     alert("Changes Saved")
